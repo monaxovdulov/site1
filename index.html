@@ -27,10 +27,26 @@
             width: 100%;
         }
         h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #6d6875; /* Приятный оттенок для заголовка */
-        }
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #6d6875; /* Цвет для начального градиента */
+    background: linear-gradient(90deg, #6d6875, #f0e5de, #6d6875);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+}
+
+/* Анимация блеска */
+@keyframes shine {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
         p {
             font-size: 18px;
             line-height: 1.6;
@@ -89,8 +105,8 @@
 
     <div class="container">
         <h1>Сертификат</h1>
-        <p>Привет! Это Алексей Рабушко. Я занимаюсь разработкой Телеграм-ботов и готов помочь тебе создать что-то полезное и удобное. Если нужен бот — обращайся, сделаю всё, чтобы было просто и работало как надо.</p>
-        <p class="signature">Подпись: Алексей</p>
+        <p>Привет! Это Лёха. Я занимаюсь разработкой Телеграм-ботов и готов помочь тебе создать что-то полезное и удобное. Если нужен бот — обращайся, сделаю всё, чтобы было просто и работало как надо.</p>
+        <p class="signature">Подпись: Лёха Р.</p>
         
         <button onclick="fillWithEmojis()">Нажми сюда!</button>
         
@@ -104,7 +120,7 @@
             let emojiText = '';
 
             // Добавим много эмодзи на страницу
-            for (let i = 0; i < 100; i++) {
+            for (let i = 0; i < 1000; i++) {
                 emojiText += emojis;
             }
 
