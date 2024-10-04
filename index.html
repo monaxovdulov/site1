@@ -39,6 +39,19 @@
             margin-top: 40px;
             font-style: italic;
         }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #6d6875;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #5a525b;
+        }
 
         /* Адаптация для мобильных устройств */
         @media (max-width: 768px) {
@@ -64,15 +77,40 @@
                 padding: 10px;
             }
         }
+
+        .emoji-area {
+            margin-top: 20px;
+            font-size: 24px;
+            word-wrap: break-word;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>Сертификат</h1>
-        <p>Привет! Это Лёха. Я занимаюсь разработкой Телеграм-ботов и готов помочь тебе создать что-то полезное и удобное. Если нужен бот — обращайся, сделаю всё, чтобы было просто и работало как надо.</p>
-        <p class="signature">Подпись: Лёха Р</p>
+        <p>Привет! Это Алексей Рабушко. Я занимаюсь разработкой Телеграм-ботов и готов помочь тебе создать что-то полезное и удобное. Если нужен бот — обращайся, сделаю всё, чтобы было просто и работало как надо.</p>
+        <p class="signature">Подпись: Алексей</p>
+        
+        <button onclick="fillWithEmojis()">Нажми сюда!</button>
+        
+        <div class="emoji-area" id="emoji-area"></div>
     </div>
+
+    <script>
+        function fillWithEmojis() {
+            const emojiArea = document.getElementById('emoji-area');
+            const emojis = '🛹🎸';
+            let emojiText = '';
+
+            // Добавим много эмодзи на страницу
+            for (let i = 0; i < 100; i++) {
+                emojiText += emojis;
+            }
+
+            emojiArea.innerHTML = emojiText;
+        }
+    </script>
 
 </body>
 </html>
